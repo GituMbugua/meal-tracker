@@ -10,13 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
 var food_component_1 = require('./food.component');
 var FoodModule = (function () {
     function FoodModule() {
     }
     FoodModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+            ],
             declarations: [food_component_1.FoodComponent],
             bootstrap: [food_component_1.FoodComponent]
         }), 

@@ -1,0 +1,37 @@
+body {
+  background-image: url('./../../resources/img/healthy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: handlee;
+}
+
+.jumbotron {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  background:  rgba(1, 0, 0, 0.5);
+  color: rgba(244, 235, 213, 0.91);
+}
+
+.jumbotron h1 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 72px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.col-md-5 {
+  float: right;
+}
+
+div label {
+  font-size: 14px;
+}

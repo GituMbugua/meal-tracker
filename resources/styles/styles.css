@@ -13,7 +13,7 @@ body {
   margin-right: 10%;
   margin-top: 2%;
   margin-bottom: 5%;
-  background:  rgba(1, 0, 0, 0.5);
+  background:  rgba(1, 0, 0, 0.7);
   color: rgba(244, 235, 213, 0.91);
 }
 
@@ -24,8 +24,14 @@ body {
   font-size: 72px;
 }
 
-h2 {
+#title {
   font-weight: bold;
+}
+
+#text {
+  margin-left: 2%;
+  margin-right: 2%;
+  text-align: center;
 }
 
 .col-md-5 {

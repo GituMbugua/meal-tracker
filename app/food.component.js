@@ -25,10 +25,14 @@ var FoodComponent = (function () {
     FoodComponent.prototype.finishedEditing = function () {
         this.selectedFood = null;
     };
+    FoodComponent.prototype.addMeal = function (newMeal) {
+        this.masterFoodsList.push(newMeal);
+        // from child
+    };
     FoodComponent = __decorate([
         core_1.Component({
             selector: 'my-food',
-            template: "\n  <div class=\"container-fluid\">\n    <food-list\n      [childFoodsList]=\"masterFoodsList\"\n      (clickSender)=\"showDetails($event)\"\n    ></food-list>\n    <edit\n      [childSelectedFood]=\"selectedFood\"\n      (finishedEditingSender)=\"finishedEditing()\"\n    ></edit>\n  </div>\n  "
+            template: "\n  <div class=\"container-fluid\">\n    <food-list\n      [childFoodsList]=\"masterFoodsList\"\n      (clickSender)=\"showDetails($event)\"\n    ></food-list>\n    <edit\n      [childSelectedFood]=\"selectedFood\"\n      (finishedEditingSender)=\"finishedEditing()\"\n    ></edit>\n    <new-food\n      (newMealSender)=\"addMeal($event)\"\n    ></new-food>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], FoodComponent);

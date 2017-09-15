@@ -28,7 +28,7 @@ var EditComponent = (function () {
     EditComponent = __decorate([
         core_1.Component({
             selector: 'edit',
-            template: "\n    <div *ngIf=\"childSelectedFood\">\n      <h1>Edit Food</h1>\n      <div>\n        <label>Change meal name:</label>\n        <input class=\"form-control\" [(ngModel)]=\"childSelectedFood.name\">\n      </div>\n      <div>\n        <label>Change meal details:</label>\n        <input class=\"form-control\" [(ngModel)]=\"childSelectedFood.details\">\n      </div>\n      <div>\n        <label>Change meal calories:</label>\n        <input class=\"form-control\" [(ngModel)]=\"childSelectedFood.calories\">\n        <button class=\"btn btn-success\" (click)=\"finishedEditing()\">Done</button>\n      </div>\n    </div>\n  "
+            template: "\n    <div class=\"col-md-3\" *ngIf=\"childSelectedFood\">\n      <h2>Edit</h2>\n      <div>\n        <label>Change meal name:</label>\n        <input class=\"form-control\" [(ngModel)]=\"childSelectedFood.name\">\n      </div><br>\n      <div>\n        <label>Change meal details:</label>\n        <input class=\"form-control\" [(ngModel)]=\"childSelectedFood.details\">\n      </div><br>\n      <div>\n        <label>Change meal calories:</label>\n        <input class=\"form-control\" [(ngModel)]=\"childSelectedFood.calories\">\n        <br>\n        <button class=\"btn btn-success\" type=\"button\" (click)=\"finishedEditing()\">Done</button>\n      </div>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], EditComponent);

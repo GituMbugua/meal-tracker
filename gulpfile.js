@@ -42,11 +42,6 @@ gulp.task('ts', ['tsClean'], shell.task([
 ]));
 
 ////////////////////// BOWER //////////////////////
-// when adding a new bower depndency:
-// stop the server
-// always use the `bower install --save` flag.
-// run `gulp bower` to build vendor files
-// restart server.
 
 gulp.task('jsBowerClean', function(){
   return del(['./build/js/vendor.min.js']);

@@ -25,7 +25,7 @@ var NewFoodComponent = (function () {
     NewFoodComponent = __decorate([
         core_1.Component({
             selector: "new-food",
-            template: "\n  <div class=\"container\">\n    <h1>New Meal</h1>\n    <div>\n      <label>Enter a meal</label>\n      <input #newMeal>\n    </div>\n    <div>\n      <label>Enter details</label>\n      <input #newDetails>\n    </div>  \n    <div>\n      <label>Number of calories</label>\n      <input #newCalories>\n    </div>\n    <button (click)=\"newClicked(\n      newMeal.value, newDetails.value, newCalories.value);\n      newMeal.value = '';\n      newDetails.value = '';\n      newCalories.value = '';\n      \">Add</button>\n  </div>\n  "
+            template: "\n  <div class=\"col-md-4\">\n    <h2>New Meal</h2>\n    <div>\n      <label>Enter a meal</label>\n      <input class=\"form-control\" #newMeal>\n    </div><br>\n    <div>\n      <label>Enter details</label>\n      <input class=\"form-control\" #newDetails>\n    </div><br>\n    <div>\n      <label>Number of calories</label>\n      <input class=\"form-control\" #newCalories>\n    </div>\n    <br>\n    <button class=\"btn btn-success\" type=\"button\" (click)=\"newClicked(\n      newMeal.value, newDetails.value, newCalories.value);\n      newMeal.value = '';\n      newDetails.value = '';\n      newCalories.value = '';\n      \">Add</button>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], NewFoodComponent);

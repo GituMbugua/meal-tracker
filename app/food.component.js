@@ -11,12 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var FoodComponent = (function () {
     function FoodComponent() {
-        this.foods = [];
+        this.masterFoodsList = [
+            new Food("Chipo", "I got chips for 50 bob!", 200),
+            new Food("Ugali Nyama", "Ugali with fried meat, mmhhh!", 600),
+            new Food("Sandwich", "Today I just have sandwich and yoghurt.", 300)
+        ];
     }
     FoodComponent = __decorate([
         core_1.Component({
             selector: 'my-food',
-            template: "\n \n  "
+            template: "\n  <div class=\"container-fluid\">\n    <div *ngFor=\"let currentFood of masterFoodsList\">\n      <h3>{{ currentFood.name }}</h3>\n      <p>{{ currentFood.details }}</p>\n      <p>{{ currentFood.calories }} calories</p>\n    </div>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], FoodComponent);

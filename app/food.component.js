@@ -28,7 +28,7 @@ var FoodComponent = (function () {
     FoodComponent = __decorate([
         core_1.Component({
             selector: 'my-food',
-            template: "\n  <div class=\"container-fluid\">\n    <food></food>\n    <div *ngIf=\"selectedFood\">\n      <h1>Edit Food</h1>\n      <div>\n        <label>Change meal name:</label>\n        <input [(ngModel)]=\"selectedFood.name\">\n      </div>\n      <div>\n        <label>Change meal details:</label>\n        <input [(ngModel)]=\"selectedFood.details\">\n      </div>\n      <div>\n        <label>Change meal calories:</label>\n        <input [(ngModel)]=\"selectedFood.calories\">\n        <button (click)=\"finishedEditing()\">Done</button>\n      </div>\n    </div>\n  </div>\n  "
+            template: "\n  <div class=\"container-fluid\">\n    <food-list\n      [childFoodsList]=\"masterFoodsList\"\n      (clickSender)=\"showDetails($event)\"\n    ></food-list>\n    <edit\n      [childSelectedFood]=\"selectedFood\"\n      (finishedEditingSender)=\"finishedEditing()\"\n    ></edit>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], FoodComponent);

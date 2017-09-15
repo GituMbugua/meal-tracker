@@ -16,11 +16,18 @@ var FoodComponent = (function () {
             new Food("Ugali Nyama", "Ugali with fried meat, mmhhh!", 600),
             new Food("Sandwich", "Today I just have sandwich and yoghurt.", 300)
         ];
+        this.selectedFood = null;
     }
+    FoodComponent.prototype.showDetails = function (clickedFood) {
+        this.selectedFood = clickedFood;
+    };
+    FoodComponent.prototype.finishedEditing = function () {
+        this.selectedFood = null;
+    };
     FoodComponent = __decorate([
         core_1.Component({
             selector: 'my-food',
-            template: "\n  <div class=\"container-fluid\">\n    <div *ngFor=\"let currentFood of masterFoodsList\">\n      <h3>{{ currentFood.name }}</h3>\n      <p>{{ currentFood.details }}</p>\n      <p>{{ currentFood.calories }} calories</p>\n    </div>\n  </div>\n  "
+            template: "\n  <div class=\"container-fluid\">\n    <div *ngFor=\"let currentFood of masterFoodsList\">\n      <h3>{{ currentFood.name }}</h3>\n      <p>{{ currentFood.details }}</p>\n      <p>{{ currentFood.calories }} calories</p>\n      <button (click)=\"showDetails(currentFood)\">Change Something</button>\n    </div>\n    <div *ngIf=\"selectedFood\">\n      <h1>Edit Food</h1>\n      <div>\n        <label>Change food name:</label>\n        <input [(ngModel)]=\"selectedFood.name\">\n      </div>\n      <div>\n        <label>Change food details:</label>\n        <input [(ngModel)]=\"selectedFood.details\">\n      </div>\n      <div>\n        <label>Change food calories:</label>\n        <input [(ngModel)]=\"selectedFood.calories\">\n        <button (click)=\"finishedEditing()\">Done</button>\n      </div>\n    </div>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], FoodComponent);

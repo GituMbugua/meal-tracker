@@ -12,7 +12,11 @@ var core_1 = require('@angular/core');
 var FoodListComponent = (function () {
     function FoodListComponent() {
         this.clickSender = new core_1.EventEmitter();
+        this.selectedFilter = "all";
     }
+    FoodListComponent.prototype.onChange = function (option) {
+        this.selectedFilter = option;
+    };
     FoodListComponent.prototype.clickedButton = function (toEdit) {
         this.clickSender.emit(toEdit);
     };
@@ -27,7 +31,7 @@ var FoodListComponent = (function () {
     FoodListComponent = __decorate([
         core_1.Component({
             selector: 'food-list',
-            template: "\n  <div class=\"col-md-5\">\n    <h2>Your Log:</h2>\n    <div *ngFor=\"let currentFood of childFoodsList\">\n      <h3>{{ currentFood.name }}</h3>\n      <p>Details: {{ currentFood.details }}</p>\n      <p>Number of Calories: {{ currentFood.calories }}</p>\n      <button class=\"btn btn-warning\" type=\"button\" (click)=\"clickedButton(currentFood)\">Change Something</button>\n    </div>\n  </div>\n  "
+            template: "\n  <div class=\"col-md-5\">\n    <h2>Your Log:</h2>\n    <select type=\"button\" class=\"btn btn-info\" (change)=\"onChange($event.target.value)\">\n      <option value=\"all\" selected=\"selected\">Show All</option>\n      <option value=\"less\">Less than 500</option>\n      <option value=\"more\">Greater than 500</option>\n    </select>\n    <div *ngFor=\"let currentFood of childFoodsList | filter:selectedFilter\">\n      <h3>{{ currentFood.name }}</h3>\n      <p>Details: {{ currentFood.details }}</p>\n      <p>Number of Calories: {{ currentFood.calories }}</p>\n      <button class=\"btn btn-warning\" type=\"button\" (click)=\"clickedButton(currentFood)\">Change Something</button>\n    </div>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], FoodListComponent);

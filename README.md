@@ -18,4 +18,4 @@ This web page is written in HTML, CSS, and Typescript.
 #### Bugs 
 No known bugs
 
-[MIT License](license)
+[MIT License](LICENSE)

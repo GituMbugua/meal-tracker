@@ -3,6 +3,7 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { FoodComponent }  from './food.component';
 import { FoodListComponent }  from './food-list.component';
+import { EditComponent }  from './edit.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { FoodListComponent }  from './food-list.component';
   declarations: [
      FoodComponent,
      FoodListComponent,
+     EditComponent,
   ],
   bootstrap: [ FoodComponent ]
 })

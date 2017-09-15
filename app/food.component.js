@@ -9,14 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var food_model_1 = require('./food.model');
 var FoodComponent = (function () {
     function FoodComponent() {
-        this.masterFoodsList = [
-            new food_model_1.Food("Chipo", "I got chips for 50 bob!", 200),
-            new food_model_1.Food("Ugali Nyama", "Ugali with fried meat, mmhhh!", 600),
-            new food_model_1.Food("Sandwich", "Today I just have sandwich and yoghurt.", 300)
-        ];
+        this.masterFoodsList = [];
         this.selectedFood = null;
     }
     FoodComponent.prototype.showDetails = function (clickedFood) {
@@ -32,7 +27,7 @@ var FoodComponent = (function () {
     FoodComponent = __decorate([
         core_1.Component({
             selector: 'my-food',
-            template: "\n  <div class=\"container-fluid\">\n    <food-list\n      [childFoodsList]=\"masterFoodsList\"\n      (clickSender)=\"showDetails($event)\"\n    ></food-list>\n    <edit\n      [childSelectedFood]=\"selectedFood\"\n      (finishedEditingSender)=\"finishedEditing()\"\n    ></edit>\n    <new-food\n      (newMealSender)=\"addMeal($event)\"\n    ></new-food>\n  </div>\n  "
+            template: "\n  <div class=\"container-fluid\">\n    <new-food\n      (newMealSender)=\"addMeal($event)\"\n    ></new-food>\n    <edit\n    [childSelectedFood]=\"selectedFood\"\n    (finishedEditingSender)=\"finishedEditing()\"\n    ></edit>\n    <food-list\n      [childFoodsList]=\"masterFoodsList\"\n      (clickSender)=\"showDetails($event)\"\n    ></food-list>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], FoodComponent);

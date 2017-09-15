@@ -8,16 +8,16 @@ import { Food } from './food.model';
       <h1>Edit Food</h1>
       <div>
         <label>Change meal name:</label>
-        <input [(ngModel)]="childSelectedFood.name">
+        <input class="form-control" [(ngModel)]="childSelectedFood.name">
       </div>
       <div>
         <label>Change meal details:</label>
-        <input [(ngModel)]="childSelectedFood.details">
+        <input class="form-control" [(ngModel)]="childSelectedFood.details">
       </div>
       <div>
         <label>Change meal calories:</label>
-        <input [(ngModel)]="childSelectedFood.calories">
-        <button (click)="finishedEditing()">Done</button>
+        <input class="form-control" [(ngModel)]="childSelectedFood.calories">
+        <button class="btn btn-success" (click)="finishedEditing()">Done</button>
       </div>
     </div>
   `

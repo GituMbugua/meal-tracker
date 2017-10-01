@@ -13,7 +13,7 @@ body {
   margin-right: 10%;
   margin-top: 2%;
   margin-bottom: 5%;
-  background:  rgba(1, 0, 0, 0.7);
+  background:  rgba(1, 0, 0, 0.8);
   color: rgba(244, 235, 213, 0.91);
 }
 
@@ -23,7 +23,7 @@ body {
   font-weight: bold;
   font-size: 72px;
 }
-
+  
 #title {
   font-weight: bold;
 }

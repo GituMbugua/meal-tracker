@@ -1,6 +1,6 @@
 # Meal Tracker
 
-#### Description
+### Description
  This web page is a tracker for the number of calories consumed in a day. 
 
 #### Meal Tracker Specs
@@ -15,7 +15,7 @@
 * CSS 
 * TypeScript
 
-### Prerequisites
+#### Prerequisites
 
 You will need the following things properly installed on your computer to use this app.
 
@@ -23,18 +23,18 @@ You will need the following things properly installed on your computer to use th
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Google Chrome](https://google.com/chrome/)
 
-### Installation
+#### Installation
 
 * `git clone <repository-url>` this repository
 * `cd meal-tracker`
 * `npm install`
 
-### Running / Development
+#### Running / Development
 
 * `gulp serve`
 * Visit the app at the link provided in your terminal.
 
-### Building
+#### Building
 
 * `gulp build` (development)
 * `gulp build --production` (production)
